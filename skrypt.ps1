@@ -30,16 +30,16 @@ function Nalesniki-Restaurant {
         # na poczatku mamy pusta tablice zamowien
         $allOrders = @()
 
-        # Pobieranie danych od klienta
-        # $customerName = $PSCmdlet.MyInvocation.BoundParameters["customerName"]
-        # if (-not $customerName) {
-        #     $customerName = Read-Host "Dzień dobry! Jak masz na imię?"
-        # }
+        Pobieranie danych od klienta
+        $customerName = $PSCmdlet.MyInvocation.BoundParameters["customerName"]
+        if (-not $customerName) {
+            $customerName = Read-Host "Dzień dobry! Jak masz na imię?"
+        }
 
-        # $customerAge = $PSCmdlet.MyInvocation.BoundParameters["customerAge"]
-        # if (-not $customerAge) {
-        #     $customerAge = Read-Host "Ile masz lat, $customerName?"
-        # }
+        $customerAge = $PSCmdlet.MyInvocation.BoundParameters["customerAge"]
+        if (-not $customerAge) {
+            $customerAge = Read-Host "Ile masz lat, $customerName?"
+        }
 
         Write-Output ""
         Write-Output "Witaj, $customerName! ($customerAge lat) Miło Cię widzieć w Restauracji Naleśników."
