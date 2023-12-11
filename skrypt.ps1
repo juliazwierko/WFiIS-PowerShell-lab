@@ -30,7 +30,7 @@ function Nalesniki-Restaurant {
         # na poczatku mamy pusta tablice zamowien
         $allOrders = @()
 
-        Pobieranie danych od klienta
+        #Pobieranie danych od klienta
         $customerName = $PSCmdlet.MyInvocation.BoundParameters["customerName"]
         if (-not $customerName) {
             $customerName = Read-Host "Dzień dobry! Jak masz na imię?"
