@@ -1,18 +1,3 @@
-<#
-Yuliya Zviarko, PowerShell (wtorek 8:50);
-        
-Krótki opis mojego skryptu:
-    Skrypt PowerShell o nazwie "Naleśniki-Restaurant" jest prostym programem interaktywnym stworzonym
-    dla restauracji oferującej naleśniki. Skrypt zbiera dane od użytkownika, takie jak imię, wiek, 
-    oraz zamówienie potraw i napojów z dostępnego menu. Następnie oblicza łączną kwotę zamówienia, 
-    uwzględniając ewentualne zniżki dla osób młodszych i studentów. Użytkownik ma również możliwość 
-    dodania dodatków do swojego zamówienia, takich jak bita śmietana czy napoje. Po zakończeniu 
-    zamówienia, skrypt wyświetla szczegółowy rachunek, oferuje opcję dodania napiwków, a następnie
-    prosi o wybór metody płatności – gotówką lub kartą. Po zakończeniu transakcji, użytkownik ma 
-    także możliwość oceny restauracji oraz podzielenia się swoją opinią. Skrypt jest przeznaczony 
-    do obsługi prostych operacji restauracyjnych, oferując interaktywną i przyjazną dla użytkownika 
-    obsługę procesu zamawiania i płacenia.
-#>
 function Nalesniki-Restaurant {
     [CmdletBinding()]
     Param()
@@ -46,15 +31,15 @@ function Nalesniki-Restaurant {
         $allOrders = @()
 
         # Pobieranie danych od klienta
-        $customerName = $PSCmdlet.MyInvocation.BoundParameters["customerName"]
-        if (-not $customerName) {
-            $customerName = Read-Host "Dzień dobry! Jak masz na imię?"
-        }
+        # $customerName = $PSCmdlet.MyInvocation.BoundParameters["customerName"]
+        # if (-not $customerName) {
+        #     $customerName = Read-Host "Dzień dobry! Jak masz na imię?"
+        # }
 
-        $customerAge = $PSCmdlet.MyInvocation.BoundParameters["customerAge"]
-        if (-not $customerAge) {
-            $customerAge = Read-Host "Ile masz lat, $customerName?"
-        }
+        # $customerAge = $PSCmdlet.MyInvocation.BoundParameters["customerAge"]
+        # if (-not $customerAge) {
+        #     $customerAge = Read-Host "Ile masz lat, $customerName?"
+        # }
 
         Write-Output ""
         Write-Output "Witaj, $customerName! ($customerAge lat) Miło Cię widzieć w Restauracji Naleśników."
